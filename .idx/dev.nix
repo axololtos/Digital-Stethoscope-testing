@@ -1,11 +1,13 @@
+nix
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
-{ pkgs, ... }: {
+{ pkgs }: {
   # Which nixpkgs channel to use.
   channel = "stable-24.05"; # or "unstable"
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.jdk11
     # pkgs.go
     # pkgs.python311
     pkgs.python312Full
@@ -15,11 +17,18 @@
   ];
 
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+    JAVA_HOME = "${pkgs.jdk11}";
+  };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      # "vscodevim.vim"
+      "KylinIDETeam.java"
+      "ms-python.debugpy"
+      "ms-python.python"
+      "redhat.java"
+      "ms-python.debugpy"
+      "ms-python.python"
     ];
 
     # Enable previews
