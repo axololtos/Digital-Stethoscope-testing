@@ -25,7 +25,8 @@ Now that we have built a digital stethoscope from off the shelf material, we can
 
 ## Step 3: Training Tensorflow Sound Classification AI
 Users now can record their own internal sound from Stethoscope, we will tensorflow sound classification to determine whether it's COVID related such as Pneumonia, or other disease which you can wait for.
-![gc](https://github.com/user-attachments/assets/7250c8ce-306a-4938-b549-d520724005de)
+![gc](https://github.com/user-attachments/assets/77bab32b-3eb0-467b-93b6-4a6849ab7f28)
+
 
 As for data, we can retrieve data from different sources. For this project we will be able to classify 5 different types of sound. To make the project simple, we will focus on Trachea, except for heart rate, which we will be using stethoscope on the heart.
 
